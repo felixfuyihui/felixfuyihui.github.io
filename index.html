@@ -1,24 +1,65 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Pre-Alignment Guided Attention for Improving Training Efficiency and Model Stability in End-to-End Speech Synthesis</title>
+    <title>DC-TseNet: A Dual-Channel Time-Domain Speech Enhancement Network </title>
     <link rel="stylesheet" type="text/css" href="../../stylesheet.css"/>
   </head>
   <body>
     <article>
       <header>
-        <h1>Samples from "DC-TseNet: A Dual-Channel Time-Domain Speech Enhancement Network"</h1>
+        <div style="text-align:center"><h1>DC-TseNet: A Dual-Channel Time-Domain Speech Enhancement Network</h1>
       </header>
     </article>
-
     <!-- <div><b>Paper:</b> <a href="https://www.baidu.com">arXiv</a> <a href="http://www.baidu.com">ICASSP 2019</a></div> -->
-    <div><b>Authors:</b> Yihui Fu, Sining Sun, Ke Wang, Lei Xie</div>
+    <div style="text-align:center"><b>Authors:</b> Yihui Fu, Sining Sun, Ke Wang, Lei Xie</div>
+	<div style="margin-right: auto;margin-left: auto; margin-top: 30px; margin-bottom: 100px; width: 70%;"deep="0">
     <div><b>Abstract:</b> In this paper, we propose an end-to-end dual-channel time domain speech enhancement approach named DC-TseNet for devices with multiple channels such as mobile phones in far-filed scenario. First, we extend TasNet from time-domain audio separation task to time-domain speech enhancement task. An Encoder-Separation-Decoder structure based end to end speech enhancement network is raised to realize our goal. Second, we try to explore the most effective way to utilize inter-channel information in time domain, such as inter-channel concatenation, summation and difference.  Our proposed DC-TseNet can enhance speech in time domain directly and take advantage of spacial information. Experimental results demonstrate that the proposed DC-TseNet gives consistently better performance than single-channel case and frequency-domain approaches. </div>
-    <div><p></p><font size="3" color="red">Note: All samples are arranged in the order of "noisy channel1, noisy channel2, enhanced, clean channel1, clean channel2". </font></div>
+    <br></br>
+	<div><b><font size="4">DC-TseNet Architecture:</b>
+    <br><img src="architecture.jpg" width="1002" height="526" /></br>
+    <br></br>
+    <div><b>Enhancement Samples:</b>
+	<p></p><font size="3" color="red">Note: All samples are enhanced using input feature combination of "y1, y2, y1-y2" (DC-TseNet) and "Y1, Y2, Y1-Y2" (LSTM). </font></div>
     <div>
-      <h3>Data size of 31 hours<p></p></h3>
+      <hr align="left" width="93%" />
       <table>
-        <tr><td class="transcript">“哀叫着，不躲避凶狠的皮鞭”<p></p></td></tr>
-        <tr><td><audio controls><source src="audio_sample/channel1/1.wav"></audio><audio controls><source src="audio_sample/channel2/1.wav"></audio><audio controls><source src="audio_sample/enhanced/1.wav"></audio><p></p></td></tr>
+	  <font size="3">Noisy (Channel1) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+	  <font size="3">Noisy (Channel2) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+	  <font size="3">Enhanced (DC-TseNet) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+	  <font size="3">Enhanced (LSTM) 
       </table>
     </div>
+    <div>
+      <hr align="left" width="93%" />
+      <table>
+        <tr ><td><audio controls><source src="audio_sample/channel1/1.wav"></audio><audio controls><source src="audio_sample/channel2/1.wav"></audio><audio controls><source src="audio_sample/enhanced/1.wav"></audio><audio controls><source src="audio_sample/enhanced_lstm/1.wav"></audio><p></p></td></tr>
+      </table>
+    </div>
+    <div>
+      <hr align="left" width="93%" />
+      <table>
+        <tr><td><audio controls><source src="audio_sample/channel1/2.wav"></audio><audio controls><source src="audio_sample/channel2/2.wav"></audio><audio controls><source src="audio_sample/enhanced/2.wav"></audio><audio controls><source src="audio_sample/enhanced_lstm/2.wav"></audio><p></p></td></tr>
+      </table>
+    </div>
+    <div>
+      <hr align="left" width="93%" />
+      <table>
+        <tr><td><audio controls><source src="audio_sample/channel1/3.wav"></audio><audio controls><source src="audio_sample/channel2/3.wav"></audio><audio controls><source src="audio_sample/enhanced/3.wav"></audio><audio controls><source src="audio_sample/enhanced_lstm/3.wav"></audio><p></p></td></tr>
+      </table>
+    </div>
+    <div>
+      <hr align="left" width="93%" />
+      <table>
+        <tr><td><audio controls><source src="audio_sample/channel1/4.wav"></audio><audio controls><source src="audio_sample/channel2/4.wav"></audio><audio controls><source src="audio_sample/enhanced/4.wav"></audio><audio controls><source src="audio_sample/enhanced_lstm/4.wav"></audio><p></p></td></tr>
+      </table>
+    </div>
+    <div>
+      <hr align="left" width="93%" />
+      <table>
+        <tr><td><audio controls><source src="audio_sample/channel1/5.wav"></audio><audio controls><source src="audio_sample/channel2/5.wav"></audio><audio controls><source src="audio_sample/enhanced/5.wav"></audio><audio controls><source src="audio_sample/enhanced_lstm/5.wav"></audio><p></p></td></tr>
+      </table>
+    </div>
+	<hr align="left" width="93%" />
+    <br></br>
+	<div><b><font size="4">Enhancement Performance:</b>
+    <br><img src="results.jpg" width="483" height="310" /></br>
